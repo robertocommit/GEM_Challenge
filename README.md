@@ -71,14 +71,14 @@ The analysis uses the following tables from the database schema `ce75a2772c06799
 
 ## Methodology
 
-1. **Data Validation**
-   - Verify the presence of both pre- and post-operation questionnaires for hip replacement patients.
-   - Confirm that answers are correctly mapped to central estimates in the `answer_options` table.
+1. **Data Selection**
+   - Filter data for hip replacement treatments only.
 
 2. **Health Score Calculation**
    - For each questionnaire (pre and post):
      - Sum the central estimates for all five dimensions.
      - Subtract this sum from 1 to get the health score.
+   - This is done in a single step in the query using `SUM(1 - ao.central_estimate) AS health_score`.
 
 3. **Improvement Calculation**
    - For each patient, calculate the difference between post-operation and pre-operation health scores.
@@ -88,7 +88,11 @@ The analysis uses the following tables from the database schema `ce75a2772c06799
    - Calculate the average improvement for each surgeon.
 
 5. **Ranking**
-   - Rank surgeons based on their average improvement scores.
+   - Rank surgeons based on their average improvement scores using the `RANK()` function.
+
+6. **Result Presentation**
+   - Display surgeon name, average improvement score, and skill rank.
+   - Order results by average improvement in descending order.
 
 ## SQL Query
 
