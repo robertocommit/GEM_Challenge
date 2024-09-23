@@ -374,3 +374,15 @@ This testing approach:
 2. Ensures changes don't affect results unexpectedly.
 3. Provides a safety net for future modifications.
 4. Helps understand expected behavior for different scenarios.
+
+## Test Results
+
+After running our test query with mock data, we obtained the following results:
+
+| Surgeon Name | Avg. Improvement | Skill Rank | Expected Improvement | Test Result |
+|--------------|------------------|------------|----------------------|-------------|
+| Dr. Johnson  | 0.7360           | 1          | 0.7360               | PASS        |
+| Dr. Smith    | 0.2660           | 2          | 0.2660               | PASS        |
+| Dr. Williams | 0.0840           | 3          | 0.0840               | PASS        |
+| Dr. Brown    | 0.0000           | 4          | 0.0000               | PASS        |
+| Dr. Jones    | -0.1070          | 5          | -0.1070              | PASS        |
