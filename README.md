@@ -1,5 +1,25 @@
 # Surgeon Performance Analysis for Hip Replacement Operations
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Objective](#objective)
+3. [EQ-5D-5L Questionnaire](#eq-5d-5l-questionnaire)
+4. [Conversion Table](#conversion-table)
+5. [Data Sources](#data-sources)
+6. [Methodology](#methodology)
+7. [SQL Query](#sql-query)
+8. [Query Results](#query-results)
+9. [Results Interpretation](#results-interpretation)
+10. [Limitations and Considerations](#limitations-and-considerations)
+11. [Future Improvements](#future-improvements)
+12. [Test](#test)
+    - [Test Strategy](#test-strategy)
+    - [Test Query](#test-query)
+    - [Test Validation](#test-validation)
+    - [Importance of Testing](#importance-of-testing)
+    - [Test Results](#test-results)
+
 ## Introduction
 
 This project analyzes the performance of surgeons conducting hip replacement operations. The analysis is based on patient-reported outcomes using the EQ-5D-5L questionnaire, which measures quality of life before and after surgery.
@@ -375,7 +395,7 @@ This testing approach:
 3. Provides a safety net for future modifications.
 4. Helps understand expected behavior for different scenarios.
 
-## Test Results
+### Test Results
 
 After running our test query with mock data, we obtained the following results:
 
